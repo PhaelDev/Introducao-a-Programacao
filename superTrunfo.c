@@ -1,5 +1,13 @@
 #include <stdio.h>
 
+float DensidadePop(int hab, float area){
+    return hab/area;
+}
+
+float CalculaPIB(float pib, int hab){
+    return pib/hab;
+}
+
 int main (){
 
     char estado;
@@ -71,6 +79,8 @@ int main (){
     printf("Area: %.2f km²\n",area);
     printf("PIB: %.2f bilhoes de reais\n",pib);
     printf("Pontos Turisticos: %d\n",nPontosTuristicos);
+    printf("Densidade Populacional: %.2f hab/km²\n",DensidadePop(habitantes,area));
+    printf("PIB per Capita: %.2f reais\n",CalculaPIB(pib*1000000000,habitantes));
     printf("|---Carta 1 ----------------------------------|\n\n\n");
 
     printf("|---Carta 2 ----------------------------------|\n");
@@ -81,6 +91,8 @@ int main (){
     printf("Area: %.2f km²\n",area2);
     printf("PIB: %.2f bilhoes de reais\n",pib2);
     printf("Pontos Turisticos: %d\n",nPontosTuristicos2);
+    printf("Densidade Populacional: %.2f hab/km²\n",DensidadePop(habitantes2,area2));
+    printf("PIB per Capita: %.2f reais\n",CalculaPIB(pib2*1000000000,habitantes2));
     printf("|---Carta 2 ----------------------------------|\n");
 
     return 0;
